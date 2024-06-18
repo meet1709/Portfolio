@@ -24,8 +24,8 @@ class TitleText extends StatelessWidget {
                   : 50,
               fontWeight: FontWeight.bold),
         ),
-        kIsWeb && Responsive.isDesktop(context)
-            ? ShaderMask(
+        // kIsWeb && Responsive.isDesktop(context)
+             ShaderMask(
                 shaderCallback: (bounds) {
                   return const LinearGradient(
                       end: Alignment.centerRight,
@@ -47,17 +47,17 @@ class TitleText extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
               )
-            : Text(
-                title,
-                style: Theme.of(context).textTheme.titleMedium!.copyWith(
-                    color: Colors.white,
-                    fontSize: !Responsive.isDesktop(context)
-                        ? Responsive.isLargeMobile(context)
-                            ? 20
-                            : 30
-                        : 50,
-                    fontWeight: FontWeight.bold),
-              ),
+            // : Text(
+            //     title,
+            //     style: Theme.of(context).textTheme.titleMedium!.copyWith(
+            //         color: Colors.white,
+            //         fontSize: !Responsive.isDesktop(context)
+            //             ? Responsive.isLargeMobile(context)
+            //                 ? 20
+            //                 : 30
+            //             : 50,
+            //         fontWeight: FontWeight.bold),
+            //   ),
       ],
     );
   }
